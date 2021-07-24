@@ -1,0 +1,7 @@
+jobs:
+  - name: run-periodic
+    command: "sleep $(($RANDOM % 3 * 60)) && python src/post_this_gosling.py"
+    schedule: "0 3 * * *"
+    shell: /bin/bash
+    captureStdout: true
+    captureStderr: true
